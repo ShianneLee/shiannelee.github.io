@@ -9,24 +9,37 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  		<script type="text/javascript">
+function toggleAndChangeText() {
+     $('#divToToggle').toggle();
+     if ($('#divToToggle').css('display') == 'none') {
+          $('#aTag').html('Show more...');
+     }
+     else {
+          $('#aTag').html('Show less...');
+     }
+}
+  		</script>
   		<link href="portfolio.css" rel="stylesheet">
 	</head>
 
 	<body>
+		<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+	      			<a class="navbar-brand" href="#home">Shianne Lee</a>
+	      			<ul class="nav navbar-nav">
+						<li class="nav-item indent"><a class="nav-link" href="#about">About Me</a></li>
+						<li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+						<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+						<li class="nav-item"><a class="nav-link" href="#artifacts">Artifacts</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav><!-- navbar -->
 
-		<div class="container-fluid">
-			<div class="navbar navbar-static-top navbar-dark bg-inverse">
-				<a class="navbar-brand" href="#home">Shianne Lee</a>
-				<ul class="nav navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-					<li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-					<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-					<li class="nav-item"><a class="nav-link" href="#artifacts">Artifacts</a></li>
-					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-				</ul>
-			</div><!-- navbar -->
-		</div>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="jumbotron">
 				<div class="container">
 					<h1 class="display-1">Shianne's Career Portfolio</h1>
@@ -34,40 +47,242 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="container">
 			<div class="row">
 				<div class="span4">
 				<section id="about">
-					<h2>About Me</h2>
-					<p>Hi, my name is Shianne Lee. I am currently pursuing a degree in software development. I have worked with many different languages, platforms, and devices. After I complete my degree, I would like to find a position dealing with mobile development, mainly Android.</p>
+					<h2 class="display-4">About Me</h2>
+					<p class="indent">Hi, my name is Shianne Lee. I am currently pursuing a degree in software development. Throughout my years in this program, I have been provided with strong technical and business skills. I have also obtained knowledge on multiple programming languages. I am able to work within teams and also individually as I do with many school projects and assignments. When problems arise within a project, it can be hard to stay positive but I practise to stay focused under pressure. I help to identify problems and implement solutions. I am also good with leading teams to finishing projects on time and within target quality. For many of my group assignments, I have taken up the position of leading the group and have met the deadlines that are required. I am looking for a position that will be able to enhance my programming knowledge and provide many years of experience.</p>
 				</section>
 				</div>
+
+				<hr class="thick-line">
+
 				<div class="span4">
 				<section id="resume">
-					<h2>Resume</h2>
-					<p>Below are some highlights to my resume as well as a link to download the full resume.</p>
-					<p></p>
-				</section>
+					<h2 class="display-4">Resume</h2>
+					<p class="indent">Below are some highlights to my resume as well as a link to download the full resume.</p>
+					<h4>Profile</h4>
+					<ul>
+						<li>Works well with others as well as independently</li>
+						<li>Honest, trustworthy, and helpful</li>
+						<li>Organized, reliable, and responsible individual</li>
+						<li>Strong customer service skills</li>
+						<li>Attentive to details and ability to multitask</li>
+					</ul>
+
+					<h4>Technical Skills</h4>
+					<table width="100%">
+						<tbody class="more-padding">
+							<tr>
+								<td width="30%"><strong>Operating System</strong></td>
+								<td width="70%">Windows XP/Vista/7/8/10, IBM i, Linux, Unix</td>
+							</tr>
+							<tr>
+								<td width="30%"><strong>Programming Languages</strong></td>
+								<td width="70%">C, C++, C#, SQL, RPG, CL, COBOL, HTML/HTML5, CSS/CSS3, PHP, JAVA, ASP.NET, JavaScript, XML, JSON</td>
+							</tr>
+							<tr>
+								<td width="30%"><strong>Database Technology</strong></td>
+								<td width="70%">Oracle, DB2, SQL/MySQL</td>
+							</tr>
+							<tr>
+								<td width="30%"><strong>Development Tools</strong></td>
+								<td width="70%">Microsoft Office, Eclipse, SSH Secure Shell, Visual Studio, Putty, Fiddler, MySQL Workbench, Git, GitHub, Rational Rose, Android Studio, Code::Blocks, JIRA, Confluence</td>
+							</tr>
+						</tbody>
+					</table>
+					
+				<div id="divToToggle" style="display: none;">
+
+					<h4>Education</h4>
+					<table>
+						<tbody>
+							<tr>
+								<td width="75%"><strong>Bachelor of Information Technology, Software Development</strong></td>
+								<td width="25%">2013 – 2017 [expected]</td>
+							</tr>
+							<tr>
+								<td width="75%"><em>Seneca College, Toronto</em></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td width="75%"><strong>Computer Programmer Diploma</strong></td>
+								<td width="25%">2010 – 2012</td>
+							</tr>
+							<tr>
+								<td width="75%"><em>Seneca College, Toronto</em></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td width="75%"><strong>Bachelor of Applied Business, Financial Services</strong></td>
+								<td width="25%">2009 – 2010</td>
+							</tr>
+							<tr>
+								<td width="75%"><em>George Brown College, Toronto</em></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="indent">Successfully completed 1 year</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h4>Academic Projects</h4>
+					<h5>Hello Healthy!</h5>
+					<p><strong>Environment:</strong> Android Studio, Java, XML</p>
+					<ul>
+						<li>Helps user keep track of weight, diet and goals</li>
+						<li>Included sliding navigation menu and splash screen</li>
+					</ul>
+					<h5>Student Relationship Management System</h5>
+					<p><strong>Environment:</strong> C#, ASP.NET</p>
+					<ul>
+						<li>Created multiple forms based on College requirements</li>
+						<li>Checked for consistency throughout the pages</li>
+						<li>Helped create project documentation</li>
+						<li>Helped create application architecture, user interface, and system interface</li>
+						<li>Helped create ERD to show system’s architecture</li>
+					</ul>
+					<h5>Graded Work Due Date Monitor</h5>
+					<p><strong>Environment:</strong> C#, ASP.NET</p>
+					<ul>
+						<li>Designed a way for students to view due dates for different assignments/labs</li>
+						<li>Allows professors to add assignments/labs with details</li>
+						<li>Created multiple forms based on assignment requirements</li>
+						<li>Checked for consistency throughout the pages</li>
+						<li>Created project documentation</li>
+						<li>Created application architecture, user interface, and system interface</li>
+					</ul>
+					<h5>ISBN Processor</h5>
+					<p><strong>Environment:</strong> C++</p>
+					<ul>
+						<li>Designed as part of a Bookstore Order Processor assignment</li>
+						<li>Processed valid ISBNs</li>
+						<li>Checked if ISBN is registered or unregistered</li>
+					</ul>
+					<h5>Binary Converter</h5>
+					<p><strong>Environment:</strong> Java</p>
+					<ul>
+						<li>Created a basic GUI application from scratch</li>
+						<li>Converts binary numbers to decimal, octal, or hexadecimal</li>
+					</ul>
+
+					<h4>Experience</h4>
+					<table>
+						<tbody>
+							<tr>
+								<td><strong>Cashier / Customer Service Representative</strong></td>
+								<td>2008 – Present</td>
+							</tr>
+							<tr>
+								<td><em>Canadian Tire, Thornhill</em></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<ul>
+										<li>Handle and balance money</li>
+										<li>Help consumers find items and processes returns/exchanges</li>
+										<li>Resolve customer complaints and complex cash register issues</li>
+										<li>Organize shelves to the store’s standard, maintain clean work area</li>
+										<li>Answer questions via phone or in person</li>
+										<li>Train many new employees for cash and customer service positions</li>
+									</ul>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><strong>Quality Assurance Technician</strong></td>
+								<td>Sept 2015 – July 2016</td>
+							</tr>
+							<tr>
+								<td><em>Secret Location, Toronto</em></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<ul>
+										<li>Perform software tests to ensure quality of projects</li>
+										<li>Review project requirements and documentation</li>
+										<li>Create and execute test cases</li>
+										<li>Manual testing across multiple browsers and mobile devices</li>
+										<li>Report defects and work with developers to confirm they are fixed</li>
+									</ul>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h4>Interests</h4>
+					<p class="indent">Music, dancing, watching comedies, volleyball</p>
+					
 				</div>
+
+					<a id="aTag" href="javascript:toggleAndChangeText();">Show more...</a>
+				</section>
+
+				<hr id="short-line">
+				<p>To download my resume, select from the following links:</p>
+				<ul>
+					<li><a href="shianne-resume.docx">Word File (.docx)</a></li>
+					<li><a href="shianne-resume.pdf" target="_blank">PDF File (.pdf)</a></li>
+				</ul>
+				
+				</div>
+
+				<hr class="thick-line">
+
 				<div class="span4">
 				<section id="skills">
-					<h2>Skills</h2>
-					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+					<h2 class="display-4">Skills</h2>
+					<p class="indent">Over the years, in the Software Development program as well as on my own, I have developed some skills that will be an asset to an organization. Through school, I have learned many programming languages and worked on many projects with and within team members. This has given me the ability to handle situations on my own as well as with others. As school requires many deadlines, I have managed to handle working under pressure and staying positive during those times. I am also able to help find solutions and solve problems. At various times, I have found myself leading teams inside and outside of school. I have met deadlines and made sure the projects were of high quality.</p>
 				</section>
 				</div>
+
+				<hr class="thick-line">
+
 				<div class="span4">
 				<section id="artifacts">
-					<h2>Artifacts</h2>
-					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+					<h2 class="display-4">Artifacts</h2>
+					<h5>Hello Healthy!</h5>
+					<p class="indent">This started as an assignment for my Android course. It is a weight tracker, calorie counter, and goal setter. After the course finished, I continued to work on it. This is still a work in progress. This is located on Github at <a href="https://github.com/ShianneLee/HelloHealthy">/HelloHealthy</a>.</p>
+
+					<h5>Student Relationship Management System</h5>
+					<p class="indent">This project was created for the school's IT program coordinators. It involved recording each interaction a coordinator had with a student. This helped to remove some issues between coordinators when dealing with the same students. My involvement in this project was creating some of the pages and testing them.</p>
+					
+					<h5>Graded Work Due Date Monitor</h5>
+					<p class="indent">This assignment was started in my ASP.NET MVC course. It should allow professors to add course work such as assignments and labs to it. It shows professors all their students and courses, students all their courses and grades, and kept all assignments and grades in one place.</p>
 				</section>
 				</div>
+
+				<hr class="thick-line">
+				
 				<div class="span4">
 				<section id="contact">
-					<h2>Contact</h2>
-					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-					<p><a class="btn" href="#">View details &raquo;</a></p>
+					<h2 class="display-4">Contact</h2>
+					<table>
+						<tbody class="more-padding">
+							<tr>
+								<td>Email: </td>
+								<td><a href="mailto:shiannelee@live.ca">shiannelee@live.ca</a></td>
+							</tr>
+							<tr>
+								<td>Github: </td>
+								<td><a href="https://github.com/shiannelee">/ShianneLee</a></td>
+							</tr>
+							<tr>
+								<td>LinkedIn: </td>
+								<td><a href="https://ca.linkedin.com/in/shiannelee">Shianne Lee</a></td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 				</div>
+
 			</div> <!-- row -->
 		</div> <!-- container -->
 

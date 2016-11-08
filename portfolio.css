@@ -1,4 +1,23 @@
-
+#short-line {
+	width: 30%;
+	text-align: left;
+	margin-left: 0;
+}
+.thick-line {
+	border-width: 3px;
+}
+h2 {
+	padding-top: 7%;
+}
+h4 {
+	padding-top: 15px;
+}
+.more-padding td {
+	padding: 7px;
+}
+.indent {
+	text-indent: 40px;
+}
 .footer {
 	text-align: center;
 	padding: 30px 0;
@@ -22,4 +41,7 @@
 }
 .footer-links a {
 	color: black;
+}
+body {
+	position: relative;
 }
