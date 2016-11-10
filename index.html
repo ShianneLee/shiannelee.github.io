@@ -5,20 +5,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title>Shianne Lee's Career e-Portfolio</title>
-		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   		<script type="text/javascript">
-function toggleAndChangeText() {
-     $('#divToToggle').toggle();
-     if ($('#divToToggle').css('display') == 'none') {
-          $('#aTag').html('Show more...');
-     }
-     else {
-          $('#aTag').html('Show less...');
-     }
-}
+			function toggleAndChangeText() {
+				$('#divToToggle').toggle();
+				if ($('#divToToggle').css('display') == 'none') {
+					$('#aTag').html('Show more...');
+				}
+				else {
+					$('#aTag').html('Show less...');
+				}
+			}
+			$('#myModal').on('shown.bs.modal', function () {
+				$('#myInput').focus()
+			})
   		</script>
   		<link href="portfolio.css" rel="stylesheet">
 	</head>
@@ -249,15 +251,225 @@ function toggleAndChangeText() {
 				<div class="span4">
 				<section id="artifacts">
 					<h2 class="display-4">Artifacts</h2>
-					<h5>Hello Healthy!</h5>
-					<p class="indent">This started as an assignment for my Android course. It is a weight tracker, calorie counter, and goal setter. After the course finished, I continued to work on it. This is still a work in progress. This is located on Github at <a href="https://github.com/ShianneLee/HelloHealthy">/HelloHealthy</a>.</p>
-					<img src="" alt="" class="pull-left">
-					<h5>Student Relationship Management System</h5>
-					<p class="indent">This project was created for the school's IT program coordinators. It involved recording each interaction a coordinator had with a student. This helped to remove some issues between coordinators when dealing with the same students. My involvement in this project was creating some of the pages and testing them.</p>
-					<img src="" alt="" class="pull-right">
-					<h5>Graded Work Due Date Monitor</h5>
-					<p class="indent">This assignment was started in my ASP.NET MVC course. It should allow professors to add course work such as assignments and labs to it. It shows professors all their students and courses, students all their courses and grades, and kept all assignments and grades in one place.</p>
-					<img src="" alt="" class="pull-left">
+					<h5 class="top-padding">Hello Healthy!</h5>
+					<p class="indent">This started as an assignment for my Android course. It is a weight tracker, calorie counter, and goal setter. After the course finished, I continued to work on it. This is still a work in progress. This is located on Github at <a href="https://github.com/ShianneLee/HelloHealthy">/HelloHealthy</a>. Click the following buttons to see snapshots of this project.</p>
+
+					
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#goals-list">Goals List</button>
+
+					<div class="modal fade" id="goals-list" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">Goals List</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/hh-goalslist.png" alt="Goals List image" class="hh-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#new-weight">Add New Weight</button>
+
+					<div class="modal fade" id="new-weight" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">Add New Weight</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/hh-addnewweight.png" alt="Add New Weight image" class="hh-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#today-intake">Today's Intake</button>
+
+					<div class="modal fade" id="today-intake" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">Today's Intake</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/hh-todaysintake.png" alt="Today's Intake image" class="hh-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#select-foods">Select Foods</button>
+
+					<div class="modal fade" id="select-foods" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">Select Foods</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/hh-selectfoods.png" alt="Select Foods image" class="hh-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<h5 class="top-padding">Student Relationship Management System</h5>
+					<p class="indent">This project was created for the school's IT program coordinators. It involved recording each interaction a coordinator had with a student. This helped to remove some issues between coordinators when dealing with the same students. My involvement in this project was creating some of the pages and testing them. Click the following buttons to see snapshots of this project.</p>
+					
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#all-records">All Records</button>
+
+					<div class="modal fade" id="all-records" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">All Records</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/srms-allrecords.png" alt="All Records image" class="srms-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#category-report">Category Report</button>
+
+					<div class="modal fade" id="category-report" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">Category Report</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/srms-categoryreport.png" alt="Category Report image" class="srms-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#all-programs">All Programs</button>
+
+					<div class="modal fade" id="all-programs" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">All Programs</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/srms-allprograms.png" alt="All Programs image" class="srms-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h5 class="top-padding">Graded Work Due Date Monitor</h5>
+					<p class="indent">This assignment was started in my ASP.NET MVC course. It should allow professors to add course work such as assignments and labs to it. It shows professors all their students and courses, students all their courses and grades, and kept all assignments and grades in one place. Click the following buttons to see snapshots of this project.</p>
+					
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#graded-work">Graded Work</button>
+
+					<div class="modal fade" id="graded-work" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">Graded Work</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/gw-gradedwork.png" alt="Graded Work image" class="gw-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#teacher-details">Teacher's Details</button>
+
+					<div class="modal fade" id="teacher-details" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">Teacher's Details</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/gw-teacherdetails.png" alt="Teacher Details image" class="gw-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<button type="button" class="btn btn-primary bg-inverse" data-toggle="modal" data-target="#all-users">All Users</button>
+
+					<div class="modal fade" id="all-users" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">All Users</h4>
+								</div>
+								<div class="modal-body">
+									<img src="documents/gw-allusers.png" alt="All Users image" class="gw-images">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
 				</div>
 
